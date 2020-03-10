@@ -1,0 +1,113 @@
+/** 
+* @file APP JS Lab 1: Basics 
+* @author Tim Orman
+* @description JS file containing functions for students to complete. Fill in the blanks.
+*/
+
+/** @function decNumeric() - declare a numeric value */
+function decNumeric(){
+	numVar = 22;
+	return numVar;
+}
+
+/** @function decString() - declare a string value */
+function decString(){
+	var strVar = 'Hello APP!';
+	return strVar;
+}
+
+/** @function decBoolean() - declare a boolean value */
+function decBoolean(){
+	var booVar = true;
+	return booVar;
+}
+
+/** @function arithmeticOp() -  take two values and multiply them and return the value */
+function arithmeticOp(valA, valB){
+	var retVal  = valA * valB ;
+	return retVal;
+}
+
+/** @function stringOp() -  take two strings, concatenate them and return the resulting string */
+function stringOp(strA, strB){
+	var retStr = (strA + ' ' + strB);
+	return retStr;
+}
+
+/** @function compOP() - take two values and check if A is less than B and return boolean result (true if A less than B) */
+function compOp(valA, valB){
+	if (valA < valB) {
+	var retVal = true;}
+	else{
+		var retVal = false;}
+	if ( valA < valB){
+	retVal = true;}
+	else{ retVal = false;}
+		
+	return retVal;
+}
+
+/** @function logicOp() -  take four values and do various comparison operations and return the result */
+function logicOp(valA, valB, valC, valD){
+	if (valA < valB && valC == valD){
+	retVal = true;}
+	else{
+	retVal = false;}
+	var retVal;
+	return retVal;
+}
+
+/** @function changeStrToNumber() -  take a string and convert it to a number (any number) */
+function changeStrToNumber(strToConvert){
+	strToConvert = 5;
+	return strToConvert;
+	
+}
+
+/** @function castStrToNumber() take two strings and cast them to numbers then add them and return the result */
+function castStrToNumber(strValue1, strValue2){
+	strValue1 = parseFloat(strValue1)
+	strValue2 = parseFloat(strValue2)
+	var retVal = strValue1 + strValue2;
+	return retVal;
+}
+
+
+/** @function msgConsole() -  write a message to the console log and return the vlaue reurned from the log function */
+function msgConsole(){
+	var strVar = "Hello APP!"
+	console.log(strVar); 
+	return strVar;
+}
+
+/** @function callAlert() -  call an alert and return value of the call */
+function callAlert(strMsg){
+	var retVal = "Hello APP!";
+	alert(strMsg)
+	return retVal;
+}
+
+
+/** @function returnArray() - take in single values and return them as an array */
+function returnArray(var1, var2, var3, var4){
+	var retArray = [var1, var2, var3, var4];
+	return retArray; 
+}
+
+
+/** @function arrayPop() -  takes in an array and returns a copy of the array with the last element removed */
+function arrayPop(arrToPop){
+	var retArray = arrToPop;
+	retArray.pop();
+	return retArray ;
+	
+}
+
+
+//@function - Advanced task: write a code in the getInput function that takes a user's name and tells them the date. 
+/*
+function getInput(){
+	
+}
+//don't forget to call the function
+*/
