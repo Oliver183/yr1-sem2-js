@@ -1,0 +1,119 @@
+/**
+ * TASK
+ * Declare a function named "changeClass" that accepts two inputs, an id and a class name. 
+ * The function should find the element with the given ID attribute, and set the class attribute of that element to the given class. 
+ * 
+ * @param strID	 	ID of the page element to be found.
+ * @param strClass	String containing the name of the class attribute. Set strID class attribute to this value.
+ */
+ 
+function changeClass(strID, strClass){
+	document.getElementById(strID).className  = strClass;
+}
+ 
+/**
+ * TASK
+ * The index page contains an unordered list with an id of "groceries". Within that list the list items have a class attribute 
+ * of either "hot" or "cold". Declare a function called "getHotItems", that returns a count of only the "hot" items from the 
+ * list.
+ *
+ * @return 	Count of the nodeListitems/elements where the class attribute = "hot"
+ */
+ 
+function getHotItems(){
+	var x = document.getElementsByClassName("example").length;
+	return x;
+
+	//return the number of items with a class attribute of "hot"
+}
+
+/**
+ * TASK
+ * Declare a function called "swapClass" that swaps the class of items in the groceries list, 
+ * so that "hot" items have a class attribute of "cold" and originally "cold" items have a class attribute of "hot".
+ */
+
+function swapClass(){
+
+	var e = document.getElementById("groceries").childNodes;
+	var i;
+	
+	for(i=0;i < e.length;i++) {
+		if(e[i].className == "hot")
+			e[i].className = "cold";
+		else if(e[i].className == "cold")
+			e[i].className = "hot";
+	}
+
+/*
+	
+	var v;
+	
+	do {
+		v = document.getElementsByClassName("hot");
+		if(v.length > 0) v[0].className = "Xcold";
+	} while(v.length > 0);
+	
+	do {
+		v = document.getElementsByClassName("cold");
+		if(v.length > 0) v[0].className = "hot";
+	} while(v.length > 0);
+	
+	do {
+		v = document.getElementsByClassName("Xcold");
+		if(v.length > 0) v[0].className = "cold";
+	} while(v.length > 0);
+	*/
+	
+}
+
+/**
+ * TASK
+ * Declare a function called "appendItem" that takes a list and an item name as parameters. The function should 
+ * append a new item with the passed name to the list.
+ *
+ * @param 	ulPassed	Unordered  list of groceries as a nodeList
+ * @param	liPassed	A String, which is the name of the new item to add to the list.
+ */
+
+function appendItem(ulPassed, liPassed){
+	//1. Create a new element with a tag of "li"
+	var node = document.createElement("li"); 
+	
+	//node.className = "cold";
+	
+	//2. Create a new text node and give it the name of the item (liPassed)
+	var textnode = document.createTextNode(liPassed);
+	//3. Attach the text node to the list item as a childNode of the list item
+	node.appendChild(textnode);
+	//4. attach the listItem to the List as a childNode of the list
+	ulPassed.appendChild(node);
+	
+	      // Create a <li> node
+         // Create a text node
+        // Append the text to <li>
+		// Append <li> to <ul> with id="myList"
+}
+
+
+/**
+ * TASK
+ * Declare a function called "swapInnerHTML". The function should take each list item and concatenate a 
+ * list item number with a "." and a space to the innerHTML of items in the passed list 
+ * e.g.  item 2 listed as 'pine nuts'becomes '2. pine nuts'. 
+ *
+ *@param	ulPassed	Unordered  list of groceries
+ */
+
+function swapInnerHTML(ulPassed){
+	var v = ulPassed.getElementsByTagName("li");
+	var i;
+	
+	
+	for(i=0;i < v.length;i++) {
+		v[i].innerHTML = i+1 + "." + " " + v[i].innerHTML;
+
+	}
+
+}
+
